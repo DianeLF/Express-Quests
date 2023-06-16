@@ -42,27 +42,21 @@ const getMovies = (req, res) => {
 const getMovieById = (req, res) => {
   const id = parseInt(req.params.id);
 
-  const movie = movies.find((movie) => movie.id === id);
-
   database
     .query("select * from movies where id = ?", [id])
     .then(([movies]) => {
-      if (id >= 7) {
-        res.status(404).send("Not found");}
-      else {
-        res.json(movies);
-      }})
+      const movie = movies.find((movie) => movie.id === id);
+      if (movies[0] != null) {
+        res.json(movie);
+      } else {
+        res.status(404).send("Not Found");
+      }
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).send("Error retrieving data from database");
     }
     );
-  
-  // if (movie != null) {
-  //   res.json(movie);
-  // } else {
-  //   res.status(404).send("Not Found");
-  // }
 };
 
 module.exports = {
