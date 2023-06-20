@@ -74,40 +74,40 @@ VALUES
     'Doe',
     'john.doe@example.com',
     'Paris',
-    'English'
+    'English',
   ),
   (
     'Valeriy',
     'Appius',
     'valeriy.appius@example.com',
     'Moscow',
-    'Russian'
+    'Russian',
   ),
   (
     'Ralf',
     'Geronimo',
     'ralf.geronimo@example.com',
     'New York',
-    'Italian'
+    'Italian',
   ),
   (
     'Maria',
     'Iskandar',
     'maria.iskandar@example.com',
     'New York',
-    'German'
+    'German',
   ),
   (
     'Jane',
     'Doe',
     'jane.doe@example.com',
     'London',
-    'English'
+    'English',
   ),
   (
     'Johanna',
     'Martino',
     'johanna.martino@example.com',
     'Milan',
-    'Spanish'
+    'Spanish',
   );
